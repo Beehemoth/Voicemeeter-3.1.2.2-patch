@@ -1,13 +1,21 @@
 # Voicemeeter8x64.exe v. 3.1.2.2 patch
 
+### skip no license popup (not actually registered)
+<pre>
 RVA: 116b1d
 
-original instruction: 41 81 FD 00 20 00 00 | cmp r13d,2000 <br>
-new instruction:      41 81 FD FF FF 00 00 | cmp r13d,FFFF <br>
+original instruction: 41 81 FD 00 20 00 00 | cmp r13d,2000
+new instruction:      41 81 FD FF FF 00 00 | cmp r13d,FFFF
+</pre>
 
+### Hide "Unregisted License" label
+<pre>
+RVA: 12065f
 
-=> skip no license popup (not actually registered)
-
+original instruction: 83 BD 5C 9A 06 00 00 | cmp dword ptr ss:[rbp+69A5C],0
+new instruction:      83 BD 5C 9A 06 00 01 | cmp dword ptr ss:[rbp+69A5C],1
+</pre>
+<br>
 patch memory at runtime not in file
 
 # Info
