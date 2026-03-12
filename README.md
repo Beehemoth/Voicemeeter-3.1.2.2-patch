@@ -4,8 +4,8 @@
 <pre>
 RVA: 21BE8
 
-new instruction: EB 24
 old instruction: 41 38
+new instruction: EB 24
 </pre>
 
 patch memory at runtime not in file
